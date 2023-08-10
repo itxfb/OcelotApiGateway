@@ -1,0 +1,2532 @@
+/*
+  5010 API-Gateway
+  5020 Security
+  5030 Vehicle Registration
+  5031 NR
+  5032 NRT
+  5033 TO
+  5040 Safe City
+  5050 Vehicle Blocking
+  5060 Courier
+  5070 Card Printing
+  5080 NP Printing
+  5090 User Management
+  6010 Biometric
+  6020 TO-EPay
+  6030 Reports
+  6040 SeriesNumber
+  6050 Administration
+  6060 Payments
+  6070 Ownership Certificate
+  6080 HPA
+  6090 Notification
+*/
+{
+  "Routes": [
+    {
+      "UpstreamPathTemplate": "/api/Auth/login",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/Auth/login",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5020
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Auth/token",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/Auth/token",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5020
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Auth/VerifyOTP",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/Auth/VerifyOTP",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5020
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Auth/SendOTP",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/Auth/SendOTP",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5020
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Auth/ReSendOTP",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/Auth/ReSendOTP",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5020
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Auth/ChangePassword",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/Auth/ChangePassword",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5020
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Auth/ResetPassword",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/Auth/ResetPassword",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5020
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Registration/GetOwnersDropDowns",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/Registration/GetOwnersDropDowns",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Registration/GetVehiclesDropDowns",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/Registration/GetVehiclesDropDowns",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Registration/GetPurchaseDropDowns",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/Registration/GetPurchaseDropDowns",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Registration/GetDocumentDropDowns",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/Registration/GetDocumentDropDowns",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Registration/GetApplications",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/Registration/GetApplications",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Registration/GetApplicationDetails",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/Registration/GetApplicationDetails",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Registration/GetOwnerDetails",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/Registration/GetOwnerDetails",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Registration/GetVehicle",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/Registration/GetVehicle",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Registration/GetHPA",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/Registration/GetHPA",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Registration/GetKeeper",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/Registration/GetKeeper",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Registration/GetRemarks",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/Registration/GetRemarks",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Registration/GetOwnerByCNIC",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/Registration/GetOwnerByCNIC",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Registration/GetBusinessByTaxNumber",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/Registration/GetBusinessByTaxNumber",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Registration/GetAuctionedNumber",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/Registration/GetAuctionedNumber",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Registration/GetAssessment",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/Registration/GetAssessment",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Registration/GetChallanDetail",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/Registration/GetChallanDetail",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Registration/GetOwnerVehicleDetails",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/Registration/GetOwnerVehicleDetails",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Registration/GetVehicleOwnerInfo",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/Registration/GetVehicleOwnerInfo",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Registration/GetVehicleOwnerInfoForDelivery",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/Registration/GetVehicleOwnerInfoForDelivery",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Registration/GetVehicleOwnerInfoForScanning",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/Registration/GetVehicleOwnerInfoForScanning",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Registration/SaveOwner",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/Registration/SaveOwner",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Registration/SaveSeller",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/Registration/SaveSeller",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Registration/NRTSaveOwner",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/Registration/NRTSaveOwner",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Registration/NRTSaveVehicle",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/Registration/NRTSaveVehicle",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Registration/SaveVehicle",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/Registration/SaveVehicle",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Registration/SaveVehiclePurchaseInfo",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/Registration/SaveVehiclePurchaseInfo",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Registration/NRTSaveVehiclePurchaseInfo",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/Registration/NRTSaveVehiclePurchaseInfo",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Registration/SaveRemarks",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/Registration/SaveRemarks",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Registration/SaveVehicleDocuments",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/Registration/SaveVehicleDocuments",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Registration/NRTSaveVehicleDocuments",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/Registration/NRTSaveVehicleDocuments",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Registration/SaveHPA",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/Registration/SaveHPA",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Registration/NRTSaveHPA",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/Registration/NRTSaveHPA",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Registration/TOSaveKeeper",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/Registration/TOSaveKeeper",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Registration/TOSaveHPA",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/Registration/TOSaveHPA",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Registration/SaveKeeper",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/Registration/SaveKeeper",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Registration/NRTSaveKeeper",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/Registration/NRTSaveKeeper",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Registration/SaveApplicationPhase",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/Registration/SaveApplicationPhase",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Registration/SavePurchaser",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/Registration/SavePurchaser",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Registration/SaveVehicleArticleDelivery",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/Registration/SaveVehicleArticleDelivery",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Registration/Upload",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/Registration/Upload",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Registration/AppPhaseChangeFromScaning",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/Registration/AppPhaseChangeFromScaning",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/VC/GetVCInfo",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/VC/GetVCInfo",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/VC/GetVCVehicleInfo",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/VC/GetVCVehicleInfo",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/VC/GetVCApplicationDetail",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/VC/GetVCApplicationDetail",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/VC/SaveVCVehicle",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/VC/SaveVCVehicle",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/VC/SaveApplicationPhase",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/VC/SaveApplicationPhase",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Representative/GetRepresentative",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/Representative/GetRepresentative",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6010
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Representative/GetApplicationsAgainstRegNo",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/Representative/GetApplicationsAgainstRegNo",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6010
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Representative/GetPersonByCNIC",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/Representative/GetPersonByCNIC",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6010
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Representative/AddRepresentative",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/Representative/AddRepresentative",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6010
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Representative/GetBiometricApplicationsByRegNo",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/Representative/GetBiometricApplicationsByRegNo",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6010
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Representative/GetAdrApplicationDetail",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/Representative/GetAdrApplicationDetail",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6010
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Representative/GetPersonDropDowns",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/Representative/GetPersonDropDowns",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6010
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Representative/MarkAdrApplicationStatus",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/Representative/MarkAdrApplicationStatus",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6010
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/TC/GetTcInfo",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/TC/GetTcInfo",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/TC/GetAssessment",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/TC/GetAssessment",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/TC/GenerateChallan",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/TC/GenerateChallan",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/TCNT/GetTcntInfo",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/TCNT/GetTcntInfo",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/TCNT/SaveTcntInfo",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/TCNT/SaveTcntInfo",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/TE/GetTeInfo",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/TE/GetTeInfo",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/TE/GetApplicationDetail",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/TE/GetApplicationDetail",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/TE/SaveTaxExpemtion",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/TE/SaveTaxExpemtion",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/TE/SaveApplicationPhase",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/TE/SaveApplicationPhase",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/TransferIntimation/GetVehicleDetails",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/TransferIntimation/GetVehicleDetails",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/TransferIntimation/SaveKeeper",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/TransferIntimation/SaveKeeper",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/TransferIntimation/SaveHPA",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/TransferIntimation/SaveHPA",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/TransferIntimation/SaveOwner",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/TransferIntimation/SaveOwner",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/TaxUpdate/GetTaxUpdateInfo",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/TaxUpdate/GetTaxUpdateInfo",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/TaxUpdate/GetTaxUpdateApplicationDetail",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/TaxUpdate/GetTaxUpdateApplicationDetail",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/TaxUpdate/SaveTaxUpdate",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/TaxUpdate/SaveTaxUpdate",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/TaxUpdate/SaveApplicationPhase",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/TaxUpdate/SaveApplicationPhase",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/UserManagement/GetDropDownsCreateUser",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/UserManagement/GetDropDownsCreateUser",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5090
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/UserManagement/GetLineManager",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/UserManagement/GetLineManager",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5090
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/UserManagement/GetUsersList",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/UserManagement/GetUsersList",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5090
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/UserManagement/GetAssignedSeriesCategories",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/UserManagement/GetAssignedSeriesCategories",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5090
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/UserManagement/GetUserByUserId",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/UserManagement/GetUserByUserId",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5090
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/UserManagement/GetPersonByCNIC",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/UserManagement/GetPersonByCNIC",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5090
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/UserManagement/GetUserPermission",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/UserManagement/GetUserPermission",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5090
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/UserManagement/CreateUser",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/UserManagement/CreateUser",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5090
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/UserManagement/UpdateUserRole",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/UserManagement/UpdateUserRole",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5090
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/UserManagement/SaveUserPermission",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/UserManagement/SaveUserPermission",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5090
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/UserManagement/CancellUserPermission",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/UserManagement/CancellUserPermission",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5090
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/UserManagement/SaveAssignedSeriesCategories",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/UserManagement/SaveAssignedSeriesCategories",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5090
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/SC/GetVehicleInfo",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/SC/GetVehicleInfo",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5040
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/avls/SaveStatusReport",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/avls/SaveStatusReport",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5050
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/RV/GetApplicationsAgainstRegNo",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/RV/GetApplicationsAgainstRegNo",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5050
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/RV/GetReinstateDropDowns",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/RV/GetReinstateDropDowns",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5050
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/RV/SaveSuspend",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/RV/SaveSuspend",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5050
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/RV/SaveReinstate",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/RV/SaveReinstate",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5050
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/RV/GetApplicationDetail",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/RV/GetApplicationDetail",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5050
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/RV/SaveApplicationPhase",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/RV/SaveApplicationPhase",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5050
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/courier/GetPostalAddress",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/courier/GetPostalAddress",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5060
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/courier/BookSingleConsignment",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/courier/BookSingleConsignment",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5060
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/courier/SaveStatus",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/courier/SaveStatus",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5060
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Printing/GetCardDetails",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/Printing/GetCardDetails",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5070
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Printing/GetCardDetailsById",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/Printing/GetCardDetailsById",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5070
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Printing/CreateBatch",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/Printing/CreateBatch",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5070
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Printing/CardPrinted",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/Printing/CardPrinted",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5070
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Printing/CardDispatched",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/Printing/CardDispatched",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5070
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Printing/StatusUpdate",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/Printing/StatusUpdate",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5070
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/DCIssuance/GetApplicationsAgainstRegNo",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/DCIssuance/GetApplicationsAgainstRegNo",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5070
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/DCIssuance/GetAssesmentDCIssuance",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/DCIssuance/GetAssesmentDCIssuance",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5070
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/DCIssuance/AddDCIssuance",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/DCIssuance/AddDCIssuance",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5070
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/DCIssuance/GenerateChallan",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/DCIssuance/GenerateChallan",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5070
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/DCIssuance/GetDCApplicationDetail",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/DCIssuance/GetDCApplicationDetail",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5070
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/DCIssuance/SaveApplicationPhase",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/DCIssuance/SaveApplicationPhase",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5070
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/DCIssuance/GetChallanDetail",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/DCIssuance/GetChallanDetail",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5070
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/NPPrinting/GetDropdowns",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/NPPrinting/GetDropdowns",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5080
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/NPPrinting/GetBatchDetail",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/NPPrinting/GetBatchDetail",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5080
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/NPPrinting/GetStatusByRegNo",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/NPPrinting/GetStatusByRegNo",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5080
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/NPPrinting/GetBatchStatus",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/NPPrinting/GetBatchStatus",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5080
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/NPPrinting/GetBatchesList",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/NPPrinting/GetBatchesList",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5080
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/NPPrinting/SearchBacthDetail",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/NPPrinting/SearchBacthDetail",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5080
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/NPPrinting/CreateBatch",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/NPPrinting/CreateBatch",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5080
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/NPPrinting/BatchForward",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/NPPrinting/BatchForward",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5080
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/NPPrinting/SaveLaserNumber",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/NPPrinting/SaveLaserNumber",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5080
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/NPPrinting/StatusUpdate",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/NPPrinting/StatusUpdate",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5080
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/NPPrinting/BatchDispatch",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/NPPrinting/BatchDispatch",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5080
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/DNPIssuance/GetApplicationsAgainstRegNo",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/DNPIssuance/GetApplicationsAgainstRegNo",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5080
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/DNPIssuance/AddDNPIssuance",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/DNPIssuance/AddDNPIssuance",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5080
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/DNPIssuance/GetAssesmentDNPIssuance",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/DNPIssuance/GetAssesmentDNPIssuance",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5080
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/DNPIssuance/GenerateChallan",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/DNPIssuance/GenerateChallan",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5080
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/DNPIssuance/GetDNPApplicationDetail",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/DNPIssuance/GetDNPApplicationDetail",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5080
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/DNPIssuance/SaveApplicationPhase",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/DNPIssuance/SaveApplicationPhase",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5080
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/DNPIssuance/GetChallanDetail",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/DNPIssuance/GetChallanDetail",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5080
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Biometric/GetVehicleInfo",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/Biometric/GetVehicleInfo",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6010
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Biometric/SaveBiometricInfo",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/Biometric/SaveBiometricInfo",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6010
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/TO/GetBusinessByNTN",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/TO/GetBusinessByNTN",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6020
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/TO/GetPersonByCNIC",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/TO/GetPersonByCNIC",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6020
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/TO/GetVehiclByRegNo",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/TO/GetVehiclByRegNo",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6020
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/TO/GetEpayAssessment",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/TO/GetEpayAssessment",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6020
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/TO/EpaySaveOwner",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/TO/EpaySaveOwner",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6020
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/TO/EpayTOPaymentIntimation",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/TO/EpayTOPaymentIntimation",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6020
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/TC/epay/GetVehicleTaxInfo",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/TC/GetVehicleTaxInfo",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6020
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/TO/epay/GetVehiclOwnerInfo",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/TO/GetVehiclOwnerInfo",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6020
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/TO/epay/SaveBuyer",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/TO/SaveBuyer",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6020
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/TO/epay/GetAssessment",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/TO/GetAssessment",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6020
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Payments/epay/SavePaymentIntimation",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/Payments/SavePaymentIntimation",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6020
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Reports/GenerateChallan",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/Reports/GenerateChallan",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Inquiry/GetVehicleDetailsAgainstRegNo",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/Inquiry/GetVehicleDetailsAgainstRegNo",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Inquiry/GetOwnersAgainstRegNo",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/Inquiry/GetOwnersAgainstRegNo",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Inquiry/GetPersonDetails",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/Inquiry/GetPersonDetails",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Inquiry/GetBusinessDetails",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/Inquiry/GetBusinessDetails",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Inquiry/GetOwnershipHistory",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/Inquiry/GetOwnershipHistory",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Inquiry/GetTaxHistory",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/Inquiry/GetTaxHistory",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Inquiry/GetApplicationsListAgainstRegNo",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/Inquiry/GetApplicationsListAgainstRegNo",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Inquiry/GetApplicationsLogsListAgainstRegNo",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/Inquiry/GetApplicationsLogsListAgainstRegNo",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Inquiry/GetPrintingAgainstRegNo",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/Inquiry/GetPrintingAgainstRegNo",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6030
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/SeriesNumber/GetAuctionSchedule",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/SeriesNumber/GetAuctionSchedule",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6040
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/SeriesNumber/GetAuctionNumbers",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/SeriesNumber/GetAuctionNumbers",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6040
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/SeriesNumber/GetSeriesCount",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/SeriesNumber/GetSeriesCount",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6040
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/SeriesNumber/GetAuctionScheduleSeries",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/SeriesNumber/GetAuctionScheduleSeries",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6040
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/SeriesNumber/GetSeriesCategoriesDropDowns",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/SeriesNumber/GetSeriesCategoriesDropDowns",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6040
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/SeriesNumber/GetDistrictsDropDowns",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/SeriesNumber/GetDistrictsDropDowns",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6040
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/SeriesNumber/GetSeriesConsumerDropDowns",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/SeriesNumber/GetSeriesConsumerDropDowns",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6040
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/SeriesNumber/GetSeriesById",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/SeriesNumber/GetSeriesById",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6040
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/SeriesNumber/GetSeriesByCategoryId",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/SeriesNumber/GetSeriesByCategoryId",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6040
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/SeriesNumber/GetSeriesAssignmentCount",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/SeriesNumber/GetSeriesAssignmentCount",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6040
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/SeriesNumber/GetSeriesAssignment",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/SeriesNumber/GetSeriesAssignment",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6040
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/SeriesNumber/GetCustomerCreditInfo",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/SeriesNumber/GetCustomerCreditInfo",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6040
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/SeriesNumber/SaveAuctionResult",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/SeriesNumber/SaveAuctionResult",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6040
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/SeriesNumber/SaveSeriesSchedule",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/SeriesNumber/SaveSeriesSchedule",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6040
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/SeriesNumber/SaveSeriesAssignment",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/SeriesNumber/SaveSeriesAssignment",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6040
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/SeriesNumber/ActivateSeries",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/SeriesNumber/ActivateSeries",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6040
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/SeriesNumber/SaveCustomerPaymentIntimation",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/SeriesNumber/SaveCustomerPaymentIntimation",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6040
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/SeriesNumber/GetReservationsListByChasisNumber",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/SeriesNumber/GetReservationsListByChasisNumber",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6040
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/SeriesNumber/SaveAdvanceReservationRegNumber",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/SeriesNumber/SaveAdvanceReservationRegNumber",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6040
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/SeriesNumber/GetRegistrationNumbersForReservation",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/SeriesNumber/GetRegistrationNumbersForReservation",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6040
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/SeriesNumber/getSeriesByCategoryAndAuctionId",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/SeriesNumber/getSeriesByCategoryAndAuctionId",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6040
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/SeriesNumber/GetAuctionTypeDropDowns",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/SeriesNumber/GetAuctionTypeDropDowns",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6040
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Admin/GetPerson",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/Admin/GetPerson",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6050
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Admin/GetBusiness",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/Admin/GetBusiness",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6050
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Admin/GetDropDowns",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/Admin/GetDropDowns",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6050
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Admin/GetbusinessReqByNTN",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/Admin/GetbusinessReqByNTN",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6050
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Admin/ApproveBusiness",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/Admin/ApproveBusiness",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6050
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Admin/GetApplicationsForCancellation",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/Admin/GetApplicationsForCancellation",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6050
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Admin/SaveCancellation",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/Admin/SaveCancellation",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6050
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Admin/GetApplicationsForProcessChange",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/Admin/GetApplicationsForProcessChange",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6050
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Admin/SaveProcessChange",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/Admin/SaveProcessChange",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6050
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Payments/SavePaymentIntimation",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/Payments/SavePaymentIntimation",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6060
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/Payments/EnqueueEpayTask",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/Payments/EnqueueEpayTask",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6060
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/OwnershipCertificate/GetApplicationsAgainstRegNo",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/OwnershipCertificate/GetApplicationsAgainstRegNo",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6070
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/OwnershipCertificate/GetAssesmentOwnership",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/OwnershipCertificate/GetAssesmentOwnership",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6070
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/OwnershipCertificate/GetDCApplicationDetail",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/OwnershipCertificate/GetDCApplicationDetail",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6070
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/OwnershipCertificate/GetChallanDetail",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/OwnershipCertificate/GetChallanDetail",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6070
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/OwnershipCertificate/AddOwnership",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/OwnershipCertificate/AddOwnership",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6070
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/OwnershipCertificate/GenerateChallan",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/OwnershipCertificate/GenerateChallan",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6070
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/OwnershipCertificate/SaveApplicationPhase",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/OwnershipCertificate/SaveApplicationPhase",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6070
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/HPA/GetOwnerVehicleDetails",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/HPA/GetOwnerVehicleDetails",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6080
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/HPA/GetBusinessByTaxNumber",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/HPA/GetBusinessByTaxNumber",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6080
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/HPA/SaveHPA",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/HPA/SaveHPA",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6080
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/HPA/SaveRemarks",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/HPA/SaveRemarks",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6080
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/HPA/GetRemarks",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/HPA/GetRemarks",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6080
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/HPA/GetApplicationDetails",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/HPA/GetApplicationDetails",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6080
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/HPA/GetOwnersDropDowns",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/HPA/GetOwnersDropDowns",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6080
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/HPA/SaveApplicationPhase",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/HPA/SaveApplicationPhase",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6080
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/HPA/SaveTerminationRemarks",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/HPA/SaveTerminationRemarks",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6080
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/HPA/SaveTerminationApplicationPhase",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/HPA/SaveTerminationApplicationPhase",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6080
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/HPA/HPATerminate",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/HPA/HPATerminate",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 6080
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/Test/Pingme",
+      "DownstreamPathTemplate": "/api/Home/Index/Test",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5112
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/Test/RateLimitedAccess",
+      "DownstreamPathTemplate": "/api/Home/RateLimitedAccess",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.50.126.65",
+          "Port": 5112
+        }
+      ],
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "5s",
+        "PeriodTimespan": 5,
+        "Limit": 1
+      }
+    }
+  ],
+  "GlobalConfiguration": {
+    //"BaseUrl": "http://10.50.126.65:5010"
+    "BaseUrl": "http://localhost:5010"
+  }
+}
